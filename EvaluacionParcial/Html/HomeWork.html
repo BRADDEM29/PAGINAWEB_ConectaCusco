@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Conecta Cusco - Tu Plataforma de Servicios Locales</title>
+	<meta name="description" content="Encuentra y publica servicios locales en Cusco: trabajadores del hogar, gasfiteros, niñeros, etc.">
+	<link rel="stylesheet" href="../Estilos/homework.css"> <link rel="icon" href="../Imagenes/favicon.ico" type="image/x-icon"> </head>
+<body>
+	<header>
+		<div class="container">
+			<div class="logo">
+				<img src="../Imagenes/logo.png" alt="Conecta Cusco Logo">
+			</div>
+			<h1>Conecta Cusco</h1>
+			<p>Publica tus habilidades y consigue clientes más rápido. Encuentra acá las diferentes categorías de empleo o servicios que te ofrecen.</p>
+		</div>
+	</header>
+
+	<nav>
+		<div class="container">
+			<ul>
+				<li><a href="HomeWork.html">Inicio</a></li> <li><a href="buscar-servicios.html?categoria=mantenimiento">Mantenimiento y Reparaciones</a></li>
+				<li><a href="buscar-servicios.html?categoria=personales">Servicios Personales y Cuidado</a></li>
+				<li><a href="buscar-servicios.html?categoria=independientes">Otros Servicios Independientes</a></li>
+				<li class="auth-links">
+					<a href="login.html">Iniciar Sesión</a>
+					<a href="registro.html">Registrarse</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<main>
+		<section class="hero">
+			<div class="container">
+				<h2>Encuentra el Profesional Ideal Cerca de Ti</h2>
+				<form action="buscar-servicios.html" method="get">
+					<input type="text" name="q" placeholder="Busca por servicio o habilidad (ej: gasfitero, niñera)">
+					<input type="text" name="location" placeholder="Tu distrito o zona">
+					<button type="submit">Buscar</button>
+				</form>
+			</div>
+		</section>
+
+		<section class="featured-content">
+			<div class="container">
+				<h2>Servicios Destacados</h2>
+				<div class="articles-grid">
+					<article class="feature-card">
+						<h3>¿Cómo funciona para Clientes?</h3>
+						<p>Busca, compara perfiles y contacta directamente a los profesionales.</p>
+						<a href="#">Más detalles</a> </article>
+					<article class="feature-card">
+						<h3>¿Eres Profesional? Publica tu Servicio</h3>
+						<p>Crea tu perfil, describe tus habilidades y llega a nuevos clientes.</p>
+						<a href="publicar-servicios.html">Publicar ahora</a>
+					</article>
+					<article class="service-preview">
+						<img src="../Imagenes/icono_gasfiteria.png" alt="Icono Gasfitería"> <h3>Gasfitería</h3>
+						<p>Encuentra expertos para reparaciones de agua y desagüe.</p>
+						<a href="buscar-servicios.html?categoria=gasfiteria">Ver gasfiteros</a>
+					</article>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="container">
+			<p>&copy; 2025 Conecta Cusco. Todos los derechos reservados.</p>
+		</div>
+	</footer>
+</html>

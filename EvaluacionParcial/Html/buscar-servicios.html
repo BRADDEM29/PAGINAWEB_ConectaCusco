@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Buscar Servicios - Conecta Cusco</title>
+	<meta name="description" content="Explora la lista de profesionales y servicios disponibles en Cusco.">
+	<link rel="stylesheet" href="../Estilos/buscar-servicios.css"> <link rel="icon" href="../Imagenes/favicon.ico" type="image/x-icon">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="logo">
+				<img src="../Imagenes/logo.png" alt="Conecta Cusco Logo">
+			</div>
+			<h1>Conecta Cusco</h1>
+		</div>
+	</header>
+
+	<nav>
+		<div class="container">
+			<ul>
+				<li><a href="HomeWork.html">Inicio</a></li>
+				<li><a href="buscar-servicios.html">Buscar Servicios</a> </li>
+				<li><a href="publicar-servicios.html">Publicar mi Servicio</a></li>
+				<li class="auth-links">
+					<a href="login.html">Iniciar Sesión</a>
+					<a href="registro.html">Registrarse</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<main>
+		<section class="service-listings">
+			<div class="container">
+				<h2>Profesionales Disponibles</h2>
+				<div class="listings-grid">
+
+					<article class="service-card">
+						<img src="../Imagenes/plomero_ejemplo.jpg" alt="Foto de Juan Pérez"> <h3>Juan Pérez</h3>
+						<p class="service-type">Gasfitería y Desatoros</p>
+						<p class="location">Área: Miraflores, Surco</p>
+						<p class="description">Soluciones rápidas para fugas, instalaciones...</p>
+						<a href="perfil-profesional.html?id=juan-perez" class="btn-secondary">Ver Perfil</a> </article>
+
+					<article class="service-card">
+						<img src="../Imagenes/ninera_ejemplo.jpg" alt="Foto de María Gómez"> <h3>María Gómez</h3>
+						<p class="service-type">Niñera / Cuidado Infantil</p>
+						<p class="location">Área: La Molina, Surquillo</p>
+						<p class="description">Experiencia en cuidado de niños de 0 a 5 años...</p>
+						<a href="perfil-profesional.html?id=maria-gomez" class="btn-secondary">Ver Perfil</a> </article>
+
+					</div>
+
+				<div class="pagination">
+					<a href="#">Anterior</a>
+					<a href="#" class="active">1</a>
+					<a href="#">2</a>
+					<a href="#">Siguiente</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="container">
+			<p>&copy; 2025 Conecta Cusco. Todos los derechos reservados.</p>
+		</div>
+	</footer>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

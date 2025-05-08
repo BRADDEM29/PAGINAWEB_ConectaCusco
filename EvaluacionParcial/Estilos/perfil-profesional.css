@@ -1,0 +1,136 @@
+/* -----------------------------------------------------------
+   Conecta Cusco • perfil profesional
+   Paleta: 031926 · 468189 · 77ACA2 · 9DBEBB · F4E9CD
+----------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root{
+  --primary:   #031926;
+  --secondary: #468189;
+  --tertiary:  #77ACA2;
+  --muted:     #9DBEBB;
+  --accent:    #F4E9CD;
+  --light:     #ffffff;
+  --glass-bg:  rgba(244,233,205,0.12);
+  --glass-border: rgba(244,233,205,0.35);
+}
+
+*,
+*::before,
+*::after{ box-sizing:border-box; margin:0; padding:0; }
+
+body{
+  font-family:'Poppins',sans-serif;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:var(--accent);
+}
+
+/* ---------- estructura ---------- */
+
+header{ padding:1.5rem 0; }
+
+header .container,
+nav .container,
+footer .container,
+.professional-profile .container{
+  width:90%; max-width:1100px; margin:0 auto;
+}
+
+.logo img{ height:48px; width:auto; }
+
+header .container{ display:flex; align-items:center; gap:1rem; }
+h1{ font-size:1.75rem; font-weight:600; }
+
+nav{
+  background:rgba(3,25,38,0.4);
+  backdrop-filter:blur(6px);
+}
+nav ul{ list-style:none; display:flex; gap:1.25rem; padding:0.75rem 0; }
+nav a{ color:var(--accent); text-decoration:none; font-weight:500; transition:opacity .25s; }
+nav a:hover{ opacity:.75; }
+.auth-links{ margin-left:auto; }
+
+/* ---------- contenedor perfil ---------- */
+
+main{ flex:1; padding:3rem 0 4rem; }
+
+.professional-profile .container{
+  background:var(--glass-bg);
+  border:1px solid var(--glass-border);
+  backdrop-filter:blur(12px) saturate(150%);
+  border-radius:20px;
+  padding:3rem 2.5rem 3.5rem;
+  box-shadow:0 16px 32px rgba(0,0,0,0.3);
+}
+
+/* encabezado perfil */
+
+.profile-header{ text-align:center; margin-bottom:2rem; }
+.profile-photo{
+  width:140px; height:140px; object-fit:cover;
+  border-radius:50%; border:4px solid var(--accent); margin-bottom:1rem;
+}
+.profile-header h1{ font-size:1.8rem; font-weight:600; }
+.service-type{ font-size:1rem; font-weight:500; color:var(--tertiary); margin-top:0.25rem; }
+
+/* secciones internas */
+
+.profile-details{ display:grid; gap:2.25rem; }
+.profile-details h2{ font-size:1.25rem; margin-bottom:0.75rem; font-weight:600; color:var(--light); }
+
+.about-me p,
+.service-area p,
+.contact-info p{ line-height:1.6; font-size:0.96rem; color:var(--accent); }
+
+/* servicios ofrecidos */
+
+.services-offered ul{ list-style:none; display:flex; flex-direction:column; gap:0.5rem; }
+.services-offered li{
+  background:var(--glass-bg); border:1px solid var(--glass-border);
+  padding:0.6rem 0.9rem; border-radius:10px; color:var(--accent);
+}
+
+/* galería */
+
+.gallery-grid{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem;
+}
+.gallery-grid img{
+  width:100%; height:160px; object-fit:cover;
+  border-radius:12px; box-shadow:0 6px 14px rgba(0,0,0,0.3);
+}
+
+/* reseñas */
+
+.review{
+  background:var(--glass-bg); border:1px solid var(--glass-border);
+  padding:1rem 1.2rem; border-radius:12px; margin-bottom:1rem; position:relative;
+}
+.review::before{
+  content:"“"; font-size:4rem; position:absolute; top:-20px; left:-10px;
+  color:var(--tertiary); opacity:0.2;
+}
+.review p{ font-size:0.95rem; line-height:1.6; color:var(--accent); }
+.reviewer{ margin-top:0.5rem; font-weight:600; text-align:right; color:var(--muted); }
+
+/* ---------- pie ---------- */
+
+footer{
+  text-align:center; padding:1.2rem 0;
+  background:rgba(3,25,38,0.4);
+  backdrop-filter:blur(6px);
+  font-size:0.85rem;
+}
+
+/* ---------- responsive ---------- */
+
+@media(max-width:650px){
+  nav ul{ flex-direction:column; align-items:center; }
+  header .container{ flex-direction:column; text-align:center; }
+  .profile-photo{ width:110px; height:110px; }
+  .gallery-grid{ grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); }
+}

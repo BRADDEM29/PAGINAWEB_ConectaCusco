@@ -1,0 +1,127 @@
+/* -----------------------------------------------------------
+   Conecta Cusco • login
+   Paleta: 031926 · 468189 · 77ACA2 · 9DBEBB · F4E9CD
+----------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root{
+  --primary:   #031926;   /* Rich Black – fondos principales */
+  --secondary: #468189;   /* Metallic Seaweed – elementos clave */
+  --tertiary:  #77ACA2;   /* Green Sheen – énfasis suave */
+  --muted:     #9DBEBB;   /* Opal – textos secundarios */
+  --accent:    #F4E9CD;   /* Champagne – CTA / contraste */
+  --light:     #ffffff;
+  --glass-bg:  rgba(244,233,205,0.12);   /* accent con 12 % */
+  --glass-border: rgba(244,233,205,0.35);
+}
+
+*,
+*::before,
+*::after{ box-sizing:border-box; margin:0; padding:0; }
+
+body{
+  font-family:'Poppins',sans-serif;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:var(--accent);
+}
+
+/* ---------- cabecera y navegación ---------- */
+
+header{ padding:1.5rem 0; }
+
+header .container,
+nav .container,
+footer .container,
+.auth-form .container{
+  width:90%; max-width:1100px; margin:0 auto;
+}
+
+.logo img{ height:48px; width:auto; }
+
+header .container{
+  display:flex; align-items:center; gap:1rem;
+}
+
+h1{ font-size:1.75rem; font-weight:600; }
+
+nav{
+  background:rgba(3,25,38,0.4);
+  backdrop-filter:blur(6px);
+}
+
+nav ul{
+  list-style:none; display:flex; gap:1.25rem; padding:0.75rem 0;
+}
+
+nav a{
+  color:var(--accent); text-decoration:none; font-weight:500;
+  transition:opacity .25s;
+}
+nav a:hover{ opacity:.75; }
+
+.auth-links{ margin-left:auto; }
+
+/* ---------- formulario ---------- */
+
+main{ flex:1; display:flex; align-items:center; justify-content:center; padding:3rem 0 4rem; }
+
+.auth-form .container{
+  background:var(--glass-bg);
+  border:1px solid var(--glass-border);
+  backdrop-filter:blur(12px) saturate(150%);
+  border-radius:16px;
+  padding:2.5rem 2rem 3rem;
+  max-width:420px;
+  width:100%;
+  box-shadow:0 16px 32px rgba(0,0,0,0.3);
+}
+
+.auth-form h2{
+  text-align:center; margin-bottom:1.75rem; font-size:1.6rem; font-weight:600;
+}
+
+.form-group{ display:flex; flex-direction:column; gap:0.25rem; margin-bottom:1.25rem; }
+label{ font-size:0.9rem; color:var(--muted); }
+input{
+  padding:0.65rem 0.85rem; border:none; border-radius:8px; font-size:0.95rem;
+}
+input:focus{ outline:2px solid var(--tertiary); }
+
+/* ---------- botón ---------- */
+
+.btn-primary{
+  width:100%; padding:0.75rem 1rem; margin-top:0.5rem;
+  border:none; border-radius:8px;
+  background:var(--secondary); color:var(--accent);
+  font-size:1rem; font-weight:600; cursor:pointer;
+  transition:transform .2s, box-shadow .2s;
+}
+.btn-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 18px rgba(0,0,0,0.35);
+}
+
+/* ---------- texto adicional ---------- */
+
+.auth-form p{ text-align:center; margin-top:1.5rem; font-size:0.85rem; }
+.auth-form a{ color:var(--tertiary); text-decoration:none; font-weight:600; }
+
+/* ---------- pie ---------- */
+
+footer{
+  text-align:center; padding:1.2rem 0;
+  background:rgba(3,25,38,0.4);
+  backdrop-filter:blur(6px);
+  font-size:0.85rem;
+}
+
+/* ---------- responsive ---------- */
+
+@media(max-width:600px){
+  nav ul{ flex-direction:column; align-items:center; }
+  header .container{ flex-direction:column; text-align:center; }
+}
